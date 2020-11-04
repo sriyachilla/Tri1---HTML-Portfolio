@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<!-- Bryce: Imported timline outline from bootstrap -->
+
+<html>
+
+<head>
+  <div class="Header">
+  <h1>AP COMSCI</h1>
+  <p>Welcome to our Portfolio. This is a collection of all our work in our LolaB scrum team so far in this course. </p>
+  </div>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+<!-- Sriya: made changes to presentation of code (font size, font type, timeline color etc) -->
+
+body {
+  background-color: red;
+  font-family: Georgia, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: red;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: white;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: red;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid red;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid red;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #FFC300;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<!-- Francis: Imported picture that represents project theme -->
+<body>
+  <img src="https://i.pinimg.com/originals/c4/77/9d/c4779de1a121116a96843e1ab2042902.jpg" alt="Project Theme Link" style="width:1200px;height:630px;">
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <!-- Sam - this is an image as a link -->
+      <h2>Project Plan: Hello Series </h2>
+        <a href="https://docs.google.com/presentation/d/1LRgHaFoqgNg5PLrv7agia8SFukxqMw8gsTkMwfANh0M/edit?usp=sharing">
+       <img src="https://thumbs.dreamstime.com/z/cute-cartoon-building-plan-digitally-generated-54023869.jpg" alt="Project Plan Link" style="width:42px;height:42px;">
+        </a>
+      <p>This is our group's project plan where we broke down WHAT we needed to do and HOW we would do it. Click the thumbnail above.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Who Wants to be a Millionaire</h2>
+      <!-- Sam - this is an image as a link -->
+      <a href="https://repl.it/join/entspfxi-ibraskyy">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png" alt="Repl.it Link" style="width:42px;height:42px;">
+        </a>
+      <p>This is the finished product of our Hello Series project plan. Click the thumbnail above.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Hello Series Grading Document</h2>
+      <!-- Sam - this is an image as a link -->
+      <a 
+      href="https://docs.google.com/document/d/1hvIRAa5kIj0kkqbA1H5t7Pes426jWiSKgJfzkL7Qb-4/edit?usp=sharing">
+       <img src="https://images.idgesg.net/images/article/2019/05/google-docs-logo-100796136-large.jpg" alt="Grading Document Link" style="width:42px;height:42px;">
+        </a>
+      <p>This document will take you to the evaluations of our team and individual contributions (Hello Series Project). Click the thumbnail above.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Project Plan: Flask</h2>
+      <!-- Sam - this is an image as a link -->
+      <a href="https://docs.google.com/presentation/d/1ZIdum1H-4KPgYB2Cza5w8xEKyG2Ekk7DP5NP_Cdqfd4/edit?usp=sharing">
+       <img src="https://thumbs.dreamstime.com/z/cute-cartoon-building-plan-digitally-generated-54023869.jpg" alt="Grading Document Link" style="width:42px;height:42px;">
+        </a>
+      <p>This is the plan in making our flask project. Click the thumbnail above.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Flask</h2>
+      <!-- Sam - this is an image as a link -->
+      <a href="https://repl.it/join/dtqqymeu-ibraskyy">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png" alt="Flask repl.it link" style="width:42px;height:42px;">
+        </a>
+      <p>This is the link to our flask project. Click the thumbnail above.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Flask Grading Document</h2>
+      <!-- Sam - this is an image as a link -->
+      <a href="https://docs.google.com/document/d/1fm7hXLp1hJRqW9ipiaZ0BFIQgnMsbu1rfwUnhqT8vzY/edit?usp=sharing">
+       <img src="https://images.idgesg.net/images/article/2019/05/google-docs-logo-100796136-large.jpg" alt="Flask Grading Document Link" style="width:42px;height:42px;">
+        </a>
+      <p>This document will take you to the evaluations of our team and individual contributions (Flask Project). Click the thumbnail above.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+<body>
+  <img src="https://wallpapercave.com/wp/wp4443741.jpg" alt="Project Theme Link" style="width:1200px;height:630px;">
+</html> 
