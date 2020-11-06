@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 
-<!-- Bryce: Imported timline outline from bootstrap -->
-
 <html>
 
+<!-- Bryce: creation of the Nav Bar-->
 <head>
-  <div class="Header">
-  <h1 style="color: yellow;">AP COMSCI</h1>
-  <p style="color:yellow;background;black">Welcome to our Portfolio, this is a collection of all our work in our LolaB scrum team so far in this course. </p>
-  </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #ee5656;
+            color: white;
+        }
+    </style>
 </head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
     body {
         background: url(https://r1.ilikewallpaper.net/iphone-11-wallpapers/download/79755/Shibuya-Japan-iphone-11-wallpaper-ilikewallpaper_com.jpg) no-repeat;
@@ -23,7 +49,8 @@
 
 <!-- Sriya: made changes to presentation of code (font size, font type, timeline color etc) -->
 
-body {
+body
+    {
   background-color: #ee5656;
   font-family: Georgia, sans-serif;
 }
@@ -153,8 +180,14 @@ body {
 }
 </style>
 
-<!-- Francis: Linking to culture/html -->
-<a href="JapaneseCultureProject.html" target="blank_">Go to Japanese Culture Project</a>
+<!-- Bryce: Creating the Navigation Bar -->
+<div class="topnav">
+    <a class="active" href="home">Home</a>
+    <a href="JapaneseCultureProject.html" target="blank_">Project</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+</div>
+
 
 <!-- Francis: Imported picture that represents project theme -->
 <div class="timeline">
@@ -221,5 +254,6 @@ body {
   </div>
 </div>
 
+</body>
 
 </html> 
