@@ -38,6 +38,10 @@ def flask_grading():
 def week9_videos():
     return render_template('week9vids.html')
 
+@app.route('/journals')
+def journals():
+    return render_template('journals.html')
+
 if __name__ == "__main__":
     #runs the application on the repl development server
     app.run(debug=True)
